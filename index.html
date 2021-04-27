@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
     <script src="https://kit.fontawesome.com/71c0e1c100.js" crossorigin="anonymous"></script>
     <title>RESUME</title>
 </head>
@@ -13,29 +14,39 @@
 <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
 <body>
-    <div class="nav">
-        <header>
-            <h3>TopResume</h3>
-            <nav class="mainNav">
-                <ul>
-                    <li>Service</li>
-                    <li>About</li>
-                    <li>Pricing</li>
-                    <li>Login</li>
-                </ul>
-            </nav>
-        </header>
-    </div>
+    <section class="nav-whole">
+        <div class="nav-left">
+            <h1>TopResume</h1>
+        </div>
+        <div class="nav-right">
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-ul" id="nav-ul">
+                    <div class="mob-search-full mob">
+                        <input type="text" class="mob-search" placeholder="Search..">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                    <a class="nav-button" href="">SERVICES</a>
+                    <a class="nav-button" href="">ABOUT</a>
+                    <a class="nav-button" href="">PRICING</a>
+                    <a href="login.html" class="mob mob-login nav-button">LOGIN</a>
+            </div>
+        </div>
+        <script src="./js/nav-whole.js"></script>
+    </section>
 
     <main id="banner">
-        <img src="./image/manager-woman.jpg" alt="banner">
+        <img src="./image/manager woman.png" alt="banner">
         <div class="bannertxt">
             <h1>We write your <br> resume so that you <br> get more interviews</h1>
             <h5>Succeed in the next phase of the career <br> by working with our telented writers.</h5>
             <button class="banner-button">ORDER YOUR RESUME</button>
         </div>
     </main>
-    <section><span class="trust">Trusted by professionals working at</span>
+
+    <section>
+        <span class="trust">Trusted by professionals working at</span>
         <div class="logo">
             <img src="./image/Amazon logo.png" alt="">
             <img src=".\image\apple.png" alt="">
@@ -86,6 +97,12 @@
                 <p class="clientStatement">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo atque saepe possimus dolore distinctio laborum illo odit unde tenetur expedita. Dolores similique, accusantium impedit necessitatibus nam temporibus sequi consectetur architecto!</p>
                 <h1 class="clientName">Pappu Gomez</h1>
                 <h4 class="clientOccup">Civil Engineer, Gps Builders</h4>
+            </div>
+            <div class="tstmdetails">
+                <i class="fas fa-quote-left"></i>
+                <p class="clientStatement">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo atque saepe possimus dolore distinctio laborum illo odit unde tenetur expedita. Dolores similique, accusantium impedit necessitatibus nam temporibus sequi consectetur architecto!</p>
+                <h1 class="clientName">Rashed Riaz</h1>
+                <h4 class="clientOccup">Software Engineer</h4>
             </div>
     </div>
 </section>
@@ -172,16 +189,16 @@
 
 <section class="get-start">
     <span class="get-start-title">Get Your Resume Now</span>
-    <p class="get-started-des">we will help you to get more interviews and to <br> succeed in the next phase of your career</p>
+    <p class="get-started-des">we will help you to get more interviews and to succeed in the next phase of your career</p>
     <button class="get-start-btn">Let's Get Started</button>
-    <p class="get-start-risk">100% Risk free. Pay after we're done <br> and you're 100% satisfied</p>
+    <p class="get-start-risk">100% Risk free. Pay after we're done and you're 100% satisfied</p>
 </section>
 
 <section class="about">
     <div class="about-left">
         <span class="abt-le-01">ABOUT US</span>
         <span class="abt-le-meet">Meet The Founder</span>
-        <p class="abt-le-des">Let Steve Marcum explain you what <br> Top Stack Resume's vision is and why <br> you shoud work with us</p>
+        <p class="abt-le-des">Let Steve Marcum explain you what Top Stack Resume's vision is and why you shoud work with us</p>
         <span class="abt-le-intro">Watch introduction video</span>
     </div>
     <div class="about-rgt"><img src="./image/ceo.jpg" alt="ceo"></div>

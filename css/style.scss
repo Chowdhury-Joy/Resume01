@@ -1,8 +1,18 @@
-@import './home';
+@import './nav-whole';
+@import './nav-whole-responsive';
+@import './index';
+@import './index-res';
 @import './footer';
+@import './footer-res';
 
 body {
-font-family: 'Kanit',
-sans-serif;
-margin: auto;
+    font-family: 'Kanit',
+    sans-serif;
+    background-color: #FFFBF5;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
+
+    @import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
