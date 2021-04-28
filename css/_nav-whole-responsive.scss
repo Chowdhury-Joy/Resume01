@@ -1,86 +1,91 @@
 @media all and (max-width: 500px) {
+.nav-container {
+    overflow-x: hidden;
+    position: relative;
+    z-index: 10;
+
     .nav-whole {
-        overflow-x: hidden;
-        position: relative;
+        .nav-left {
+            h1 {}
+        }
 
         .nav-right {
-            #hamburger {
-                display: block;
-                background-color: transparent;
-                // color: white;
-                cursor: pointer;
-                font-size: 24px;
-                border: none;
+            // position: relative;
 
-                :focus {
-                    outline: none;
-                }
-            }
-
-            .nav-ul {
-                position: absolute;
-                top: 7vh;
-                right: 0;
-                width: 100%;
-                height: 88vh;
-                background-color: white;
-                color: black;
-                display: flex;
-                flex-direction: column;
-                // align-items: center;
-                transform: translateX(100%);
-                transition: transform 0.5s ease-in;
-                z-index: 5;
-
-                .mob {
-                    display: block;
-                    text-decoration: none;
-                }
-
-                >* {
-                    margin-top: 30px;
-                }
-
-                .nav-button {
-                    // align-self: center;
-                    font-size: 15px;
-
-                }
-
-                .mob-search-full {
-                    position: relative;
-
-                    .mob-search {
-                        height: 60px;
-                        width: 80vw;
-                        border: none;
-                        background-color: rgb(135, 179, 164);
-                        color: white;
-                        font-size: 18px;
-                        padding: 10px;
-                    }
-
-                    button {
-                        position: absolute;
-                        top: 0%;
-                        right: 0%;
-                        height: 60px;
-                        width: 20vw;
-                        padding: 10px;
-                        background: rgb(135, 179, 164);
-                        color: white;
-                        font-size: 17px;
-                        border: none;
-                        border-left: none;
-                        cursor: pointer;
-                    }
-                }
-            }
-
-            .show {
+            &.active .nav-ul {
                 transform: translateX(0%);
-            }
+                transition: .6s cubic-bezier(.17, .67, .55, .92);
+                        }
+                        &.active .menu {
+                            opacity: 0;
+                        }
 
+                        &.active .close {
+                            opacity: 1;
+                        }
+
+                        .menu {
+                            position: absolute;
+                            top: 25%;
+                            right: 3%;
+                            transform: translate(-50%, -50%);
+                            z-index: 5;
+                            font-weight: 500;
+                            font-size: 15px;
+                            cursor: pointer;
+                            text-decoration: underline;
+                            transition: 0.2s;
+                        }
+
+                        .close {
+                            position: absolute;
+                            top: 25%;
+                            cursor: pointer;
+                            text-decoration: underline;
+                            right: 3%;
+                            transform: translate(-50%, -50%);
+                            z-index: 3;
+                            font-weight: 500;
+                            font-size: 15px;
+                            opacity: 0;
+                            transition: 0.2s;
+                        }
+        .nav-ul {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            right: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #fff;
+            transition: .6s cubic-bezier(.17, .67, .55, .92);
+            transform: translateX(100%);
+            z-index: 2;
+
+            &::after {
+                content: '';
+                clear: both;
+                display: table;
+            }
         }
+
+        .nav-button {
+        }
+        .mob {
+            display: block;
+}
+}
     }
+  }
+
+.nav-ul a,
+.nav-ul div {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
 }
