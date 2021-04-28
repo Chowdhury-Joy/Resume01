@@ -43,6 +43,7 @@
 
 @media all and (max-width: 500px) {
   .nav-whole {
+    overflow-x: hidden;
     position: relative;
   }
   .nav-whole .nav-right #hamburger {
@@ -345,20 +346,14 @@
   grid-area: nmbr;
   font-family: 'Noto Serif', serif;
   font-size: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .process .process-descrptn .steps .step-ti {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: title;
+  font-size: 20px;
 }
 
 .process .process-descrptn .steps .step-des {
