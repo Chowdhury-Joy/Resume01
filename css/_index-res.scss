@@ -4,13 +4,14 @@
     #banner {
         display: flex;
         justify-content: space-evenly;
-        margin-top: 2vh;
+        margin: 2vh 0 0 10px;
 
         img {
             width: 380px;
         }
 
         .bannertxt {
+            margin-left: 25px;
             h1 {
                 display: flex;
                 font-size: 30px;
@@ -45,7 +46,7 @@
         padding-top: 15px;
 
         img {
-            width: 8%;
+            width: 12%;
         }
     }
 
@@ -75,9 +76,23 @@
     }
 
     //!! process starts
-    .process {
-        margin-top: 10vh;
+.process {
+    margin-top: 10vh;
+    .process-top {
+        .proc-t-3 {
+            width: 80%;
+            margin: auto;
+        }
     }
+
+    .process-descrptn {
+        .steps {
+            .step-nm {
+                margin-top: 45px;
+            }
+        }
+    }
+}
 
     //!! pricing starts
     .pricing {
@@ -261,6 +276,24 @@
     //!! process starts
     .process {
         margin-top: 10vh;
+        .process-descrptn {
+            .steps {
+                display: grid;
+                grid-template-columns: 5vw 50vw;
+                grid-auto-rows: 5vh 20vh;
+                grid-template-areas: "nmbr title"
+                    "descr descr";
+
+                .step-nm {
+                    font-size: 30px;
+                    margin-top: 10px;
+                }
+
+                .step-ti {
+                    font-size: 20px;
+                }
+            }
+        }
     }
 
     //!! pricing starts
@@ -280,12 +313,14 @@
             }
 
             .pric-t-02 {
-                font-size: 40px;
+                font-size: 30px;
+                text-align: center;
                 font-weight: bolder;
             }
 
             .pric-t-03 {
-                font-size: 16px;
+                font-size: 14px;
+                opacity: 0.8;
                 font-weight: bolder;
             }
         }

@@ -6,6 +6,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
+  width: 100vw;
   padding: 0;
 }
 
@@ -52,53 +53,28 @@ body {
 
 @media all and (max-width: 500px) {
   .nav-container {
-    overflow-x: hidden;
     position: relative;
-    z-index: 10;
   }
-  .nav-container .nav-whole .nav-right.active .nav-ul {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    -webkit-transition: 0.6s cubic-bezier(0.17, 0.67, 0.55, 0.92);
-    transition: 0.6s cubic-bezier(0.17, 0.67, 0.55, 0.92);
+  .nav-container .nav-whole {
+    width: 100vw;
   }
-  .nav-container .nav-whole .nav-right.active .menu {
-    opacity: 0;
-  }
-  .nav-container .nav-whole .nav-right.active .close {
-    opacity: 1;
-  }
-  .nav-container .nav-whole .nav-right .menu {
-    position: absolute;
-    top: 25%;
-    right: 3%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    z-index: 5;
-    font-weight: 500;
-    font-size: 15px;
+  .nav-container .nav-whole .nav-right #hamburger {
+    display: block;
+    background-color: transparent;
     cursor: pointer;
-    text-decoration: underline;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+    font-size: 24px;
+    border: none;
   }
-  .nav-container .nav-whole .nav-right .close {
-    position: absolute;
-    top: 25%;
-    cursor: pointer;
-    text-decoration: underline;
-    right: 3%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    z-index: 3;
-    font-weight: 500;
-    font-size: 15px;
-    opacity: 0;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+  .nav-container .nav-whole .nav-right #hamburger :focus {
+    outline: none;
   }
   .nav-container .nav-whole .nav-right .nav-ul {
     position: absolute;
+    top: 8.5vh;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    color: black;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -106,37 +82,59 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    top: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #fff;
-    -webkit-transition: 0.6s cubic-bezier(0.17, 0.67, 0.55, 0.92);
-    transition: 0.6s cubic-bezier(0.17, 0.67, 0.55, 0.92);
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    z-index: 2;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    opacity: 0;
   }
-  .nav-container .nav-whole .nav-right .nav-ul::after {
-    content: '';
-    clear: both;
-    display: table;
-  }
-  .nav-container .nav-whole .nav-right .mob {
+  .nav-container .nav-whole .nav-right .nav-ul .mob {
     display: block;
+    text-decoration: none;
   }
-  .nav-ul a,
-  .nav-ul div {
+  .nav-container .nav-whole .nav-right .nav-ul > * {
+    margin-top: 30px;
+  }
+  .nav-container .nav-whole .nav-right .nav-ul .nav-button {
+    font-size: 20px;
+    letter-spacing: 2px;
     text-decoration: none;
     color: black;
-    font-weight: 600;
-    font-size: 20px;
+    padding: 16px 0;
+    text-align: center;
+  }
+  .nav-container .nav-whole .nav-right .nav-ul .mob-search-full {
+    position: relative;
+  }
+  .nav-container .nav-whole .nav-right .nav-ul .mob-search-full .mob-search {
+    height: 60px;
+    width: 80vw;
+    border: none;
+    background-color: #87b3a4;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+  }
+  .nav-container .nav-whole .nav-right .nav-ul .mob-search-full button {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 60px;
+    width: 20vw;
+    padding: 10px;
+    background: #87b3a4;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-left: none;
+    cursor: pointer;
+  }
+  .nav-container .nav-whole .nav-right .show {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
   }
 }
 
@@ -148,7 +146,6 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin-top: 10vh;
-  z-index: -50;
 }
 
 #banner img {
@@ -670,10 +667,13 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    margin-top: 2vh;
+    margin: 2vh 0 0 10px;
   }
   #banner img {
     width: 380px;
+  }
+  #banner .bannertxt {
+    margin-left: 25px;
   }
   #banner .bannertxt h1 {
     display: -webkit-box;
@@ -711,7 +711,7 @@ body {
     padding-top: 15px;
   }
   .logo img {
-    width: 8%;
+    width: 12%;
   }
   .testim {
     background-color: #EEF2F8;
@@ -737,6 +737,13 @@ body {
   }
   .process {
     margin-top: 10vh;
+  }
+  .process .process-top .proc-t-3 {
+    width: 80%;
+    margin: auto;
+  }
+  .process .process-descrptn .steps .step-nm {
+    margin-top: 45px;
   }
   .pricing {
     margin-top: 10vh;
@@ -910,6 +917,21 @@ body {
   .process {
     margin-top: 10vh;
   }
+  .process .process-descrptn .steps {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 5vw 50vw;
+        grid-template-columns: 5vw 50vw;
+    grid-auto-rows: 5vh 20vh;
+        grid-template-areas: "nmbr title" "descr descr";
+  }
+  .process .process-descrptn .steps .step-nm {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  .process .process-descrptn .steps .step-ti {
+    font-size: 20px;
+  }
   .pricing {
     margin-top: 10vh;
     background-color: #EEF2F8;
@@ -932,11 +954,13 @@ body {
     font-weight: bolder;
   }
   .pricing .pricing-top .pric-t-02 {
-    font-size: 40px;
+    font-size: 30px;
+    text-align: center;
     font-weight: bolder;
   }
   .pricing .pricing-top .pric-t-03 {
-    font-size: 16px;
+    font-size: 14px;
+    opacity: 0.8;
     font-weight: bolder;
   }
   .pricing .pricing-main {
