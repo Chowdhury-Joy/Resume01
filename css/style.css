@@ -917,6 +917,11 @@ body {
   .process {
     margin-top: 10vh;
   }
+  .process .process-top .proc-t-3 {
+    width: 90%;
+    font-size: 15px;
+    opacity: 0.8;
+  }
   .process .process-descrptn .steps {
     display: -ms-grid;
     display: grid;
@@ -1031,6 +1036,7 @@ body {
             flex-direction: column;
     margin-top: 10vh;
     padding: 5vh 2vw;
+    text-align: center;
   }
   .about .about-rgt {
     margin-top: 2vh;
@@ -1044,6 +1050,23 @@ body {
   .container {
     padding: 2rem;
     width: 100vw;
+  }
+  .container h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .accordion button[aria-expanded='true'] {
+    color: #03d294;
+  }
+  .accordion button[aria-expanded='true'] .icon::after {
+    width: 0;
+  }
+  .accordion button[aria-expanded='true'] + .accordion-content {
+    opacity: 1;
+    max-height: 12em;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
   }
 }
 

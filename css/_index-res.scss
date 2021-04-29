@@ -276,6 +276,13 @@
     //!! process starts
     .process {
         margin-top: 10vh;
+        .process-top {
+            .proc-t-3 {
+                width: 90%;
+                font-size: 15px;
+                opacity: 0.8;
+            }
+        }
         .process-descrptn {
             .steps {
                 display: grid;
@@ -403,6 +410,7 @@
         flex-direction: column;
         margin-top: 10vh;
         padding: 5vh 2vw;
+        text-align: center;
 
         .about-rgt {
             margin-top: 2vh;
@@ -417,5 +425,28 @@
     .container {
         padding: 2rem;
         width: 100vw;
+        h2 {
+            font-size: 20px;
+            text-align: center;
+        }
+        }
+.accordion {
+    button[aria-expanded='true'] {
+        color: $blue;
+
+        .icon {
+            &::after {
+                width: 0;
+            }
+        }
+
+        +.accordion-content {
+            opacity: 1;
+            max-height: 12em;
+            transition: all 200ms linear;
+            will-change: opacity, max-height;
+        }
     }
+}
+
 }
