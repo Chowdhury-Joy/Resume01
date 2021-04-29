@@ -157,10 +157,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-size: 30px;
-}
-
-#banner .bannertxt h5 {
-  width: 90%;
+  width: 60%;
 }
 
 #banner .bannertxt .banner-button {
